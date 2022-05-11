@@ -1,20 +1,27 @@
-html {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@charset "UTF-8";
+@font-face {
+  font-family: "CeraPro-Regular";
+  font-weight: 400;
+  font-style: normal;
+  src: local("CeraPro-Regular"), url("../fonts/CeraPro-Regular.woff2") format("woff2"), url("../fonts/CeraPro-Regular.woff") format("woff");
+  font-display: swap;
 }
-
+/* Указываем box sizing */
 *,
-*::after,
-*::before {
-  box-sizing: inherit;
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+/* Убираем внутренние отступы */
 ul[class],
 ol[class] {
   padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
+/* Убираем внешние отступы */
 body,
 h1,
 h2,
@@ -23,8 +30,6 @@ h4,
 h5,
 h6,
 p,
-ul,
-ol,
 li,
 figure,
 figcaption,
@@ -32,17 +37,42 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  color: #fff;
 }
 
-ul[class] {
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
   list-style: none;
+  padding: 0;
 }
 
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
 img {
   max-width: 100%;
   display: block;
 }
 
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
 input,
 button,
 textarea,
@@ -50,12 +80,128 @@ select {
   font: inherit;
 }
 
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 .container {
   max-width: 1330px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.slider-item__title, .header-menu__link, .header-menu__contact {
+  font-family: "CeraPro-Regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  position: relative;
+}
+body .header {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  left: 0;
+  right: 0;
+}
+
+.header-menu {
+  padding: 51px 0 53px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-menu__list {
+  display: flex;
+  align-items: center;
+}
+.header-menu__item + .header-menu__item {
+  margin-left: 47px;
+}
+.header-menu__link, .header-menu__contact {
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+.header-menu__logo {
+  margin: 0 auto;
+}
+.header-menu__contact {
+  display: inline-block;
+}
+.header-menu__nav {
+  display: flex;
+  align-items: center;
+  margin-left: 48px;
+}
+.header-menu__nav-link + .header-menu__nav-link {
+  margin-left: 25px;
+}
+
+.slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  z-index: 1;
+  background: rgba(136, 136, 136, 0.3);
+  border-radius: 60px;
+  width: 63px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  left: 70px;
+}
+.slider .slick-arrow.slick-next {
+  right: 70px;
+  margin-left: auto;
+}
+
+.slider-item {
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slider-item__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.slider-item__title {
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: -0.04em;
+  position: relative;
+  padding-bottom: 5px;
+}
+.slider-item__title::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  opacity: 0.3;
 }/*# sourceMappingURL=style.css.map */
