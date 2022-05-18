@@ -2,22 +2,24 @@
 @import "reset";
 @import "global";
 @import "vars";
-body {
-  position: relative;
-  .header {
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    left: 0;
-    right: 0;
-  }
-}
+//body {
+//  position: relative;
+//  .header {
+//    position: absolute;
+//    top: 0;
+//    z-index: 1;
+//    left: 0;
+//    right: 0;
+//  }
+//}
 .header-menu {
   padding: 51px 0 53px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   //background-color: blueviolet;
+  position: relative;
+  z-index: 2;
   &__list {
     display: flex;
     align-items: center;
@@ -47,6 +49,17 @@ body {
     margin-left: 25px;
   }
 }
+.header-page {
+  background: #f5ece3;
+  .header-menu__link,
+  .header-menu__contact {
+    @extend %CeraPro-Regular-400;
+    color: #555;
+  }
+}
+.header-slider {
+  margin-top: -128px;
+}
 .slider {
   .slick-arrow {
     position: absolute;
@@ -75,7 +88,7 @@ body {
   }
 }
 .slider-item {
-  height: 100vh;
+  //height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -153,7 +166,7 @@ body {
     max-width: 542px;
     width: 100%;
     margin-left: auto;
-    padding: 200px 0;
+    padding: 190px 0;
   }
   &__logo {
     display: inline-block;
@@ -246,6 +259,68 @@ body {
     &:hover {
       transform: scale(1.02);
     }
+  }
+}
+.info-nav {
+  background: #eee4da;
+  padding: 14px 0 13px;
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item + .info-nav__item {
+    margin-left: 70px;
+  }
+  &__link {
+    @extend %CeraPro-Regular-400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #555555;
+    opacity: 0.4;
+  }
+  &__link--active {
+    opacity: 1;
+  }
+}
+.care {
+  background: #f5ece3;
+  padding: 70px 0;
+  &__title {
+    @extend %CeraPro-Regular-400;
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #555555;
+    margin-bottom: 38px;
+    text-align: center;
+  }
+}
+.page-info {
+  background: rgb(245, 236, 227) url("../img/category/info-bg.png") no-repeat left
+    center;
+  //background: rgb(245, 236, 227) url("../img/brand.png") no-repeat left center;
+  &__inner {
+    max-width: 650px;
+    width: 100%;
+    margin-left: auto;
+    padding: 250px 0;
+    padding-left: 114px;
+  }
+  &__text {
+    @extend %CeraPro-Regular-400;
+    font-size: 32px;
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    margin: 67px 0 34px;
+    color: #555;
+  }
+  &__description {
+    @extend %CeraPro-Regular-400;
+    font-size: 18px;
+    line-height: 180%;
+    letter-spacing: -0.02em;
+    color: #555;
   }
 }
 .footer {

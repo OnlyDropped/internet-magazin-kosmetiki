@@ -96,27 +96,30 @@ a {
   color: #fff;
 }
 
+body, html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
 .container {
   max-width: 1330px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-.footer-item__contacts-link, .footer-item__link, .footer-item__text, .footer-item__title, .society__link, .society__text, .brand__left-subtitle, .brand__left-title, .brand__subtitle, .brand__text, .product__price, .product__text, .slider-item__title, .header-menu__link, .header-menu__contact {
+.footer-item__contacts-link, .footer-item__link, .footer-item__text, .footer-item__title, .page-info__description, .page-info__text, .care__title, .info-nav__link, .society__link, .society__text, .brand__left-subtitle, .brand__left-title, .brand__subtitle, .brand__text, .product__price, .product__text, .slider-item__title, .header-page .header-menu__link,
+.header-page .header-menu__contact, .header-menu__link, .header-menu__contact {
   font-family: "CeraPro-Regular", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-body {
-  position: relative;
-}
-body .header {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  left: 0;
-  right: 0;
 }
 
 .header-menu {
@@ -124,6 +127,8 @@ body .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 .header-menu__list {
   display: flex;
@@ -152,6 +157,18 @@ body .header {
   margin-left: 25px;
 }
 
+.header-page {
+  background: #f5ece3;
+}
+.header-page .header-menu__link,
+.header-page .header-menu__contact {
+  color: #555;
+}
+
+.header-slider {
+  margin-top: -128px;
+}
+
 .slider .slick-arrow {
   position: absolute;
   top: 50%;
@@ -177,7 +194,6 @@ body .header {
 }
 
 .slider-item {
-  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -249,7 +265,7 @@ body .header {
   max-width: 542px;
   width: 100%;
   margin-left: auto;
-  padding: 200px 0;
+  padding: 190px 0;
 }
 .brand__logo {
   display: inline-block;
@@ -339,6 +355,65 @@ body .header {
 }
 .society__img:hover {
   transform: scale(1.02);
+}
+
+.info-nav {
+  background: #eee4da;
+  padding: 14px 0 13px;
+}
+.info-nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info-nav__item + .info-nav__item {
+  margin-left: 70px;
+}
+.info-nav__link {
+  font-size: 14px;
+  line-height: 120%;
+  color: #555555;
+  opacity: 0.4;
+}
+.info-nav__link--active {
+  opacity: 1;
+}
+
+.care {
+  background: #f5ece3;
+  padding: 70px 0;
+}
+.care__title {
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  color: #555555;
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.page-info {
+  background: rgb(245, 236, 227) url("../img/category/info-bg.png") no-repeat left center;
+}
+.page-info__inner {
+  max-width: 650px;
+  width: 100%;
+  margin-left: auto;
+  padding: 250px 0;
+  padding-left: 114px;
+}
+.page-info__text {
+  font-size: 32px;
+  line-height: 150%;
+  letter-spacing: -0.03em;
+  margin: 67px 0 34px;
+  color: #555;
+}
+.page-info__description {
+  font-size: 18px;
+  line-height: 180%;
+  letter-spacing: -0.02em;
+  color: #555;
 }
 
 .footer {
