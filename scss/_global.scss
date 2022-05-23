@@ -13,3 +13,11 @@ body{
   margin: 0 auto;
   padding: 0 15px;
 }
+.title{
+  @extend %CeraPro-Regular-400;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  color: #555555;
+}
