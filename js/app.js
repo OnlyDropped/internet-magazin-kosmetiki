@@ -1,3 +1,4 @@
+
 $('.slider').slick({
    arrows: true,
    prevArrow: '<button type="button" class="slick-prev"><img src="img/icons/arrrow-prev.svg" alt=""></button>',
@@ -70,10 +71,12 @@ $('.beauty-product__wrapper').slick({
 
 
 $('.add-card__tabs').each(function() {
-	let ths = $(this);
+	var ths = $(this);
 	ths.find('.add-card__tab-item').not(':first').hide();
 	ths.find('.add-card__tab').click(function() {
 		ths.find('.add-card__tab').removeClass('active').eq($(this).index()).addClass('active');
-		ths.find('.add-card__tab-item').hide().eq($(this).index()).fadeIn()
+		ths.find('.add-card__tab-item').hide().eq($(this).index()).fadeIn();
 	}).eq(0).addClass('active');
 });
+
+
