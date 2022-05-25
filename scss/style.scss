@@ -1038,6 +1038,7 @@
   .footer-item__social-link {
     width: 62px;
     height: 62px;
+    background: #eee4da;
   }
   .footer-item__social-link + .footer-item__social-link {
     margin-left: 26px;
@@ -1101,6 +1102,107 @@
     align-items: center;
     svg {
       margin-left: 10px;
+    }
+  }
+}
+.process {
+  padding: 134px 0 110px;
+  &__inner {
+    max-width: 809px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .about-company__subtitle {
+    margin-top: 50px;
+  }
+  &__banner {
+    margin-top: 50px;
+    width: 100%;
+    height: 420px;
+    border-radius: 6px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.bonus {
+  padding: 134px 0 112px;
+  &__inner {
+    max-width: 809px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__img {
+    margin-top: 30px;
+  }
+  &__list {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item + .bonus__item {
+    margin-left: 120px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    @extend %CeraPro-Light-300;
+    font-weight: 300;
+    font-size: 96px;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    color: #ac8f78;
+  }
+  &__title {
+    @extend %CeraPro-Regular-400;
+    //@extend %CeraPro-Light-300;
+    font-size: 20px;
+    line-height: 180%;
+    letter-spacing: -0.02em;
+    color: #555;
+    opacity: 0.3;
+  }
+}
+.delivery {
+  padding: 134px 0 110px;
+  &__inner {
+    max-width: 809px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__title {
+    @extend %CeraPro-Medium-500;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: #555;
+    margin-top: 50px;
+  }
+  &__item + .delivery__item{
+    margin-top: 29px;
+  }
+  &__item{
+    @extend %CeraPro-Regular-400;
+
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.02em;
+    color: #555;
+    padding-left: 28px;
+    position: relative;
+    &:before{
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 7px;
+      width: 5px;
+      height: 5px;
+      background-color: #555;
+      border-radius: 50%;
     }
   }
 }

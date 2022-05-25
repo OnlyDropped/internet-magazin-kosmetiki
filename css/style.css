@@ -1,9 +1,23 @@
 @charset "UTF-8";
 @font-face {
+  font-family: "CeraPro-Medium";
+  font-weight: 500;
+  font-style: normal;
+  src: local("CeraPro-Medium"), url("../fonts/CeraPro-Medium.woff2") format("woff2"), url("../fonts/CeraPro-Medium.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
   font-family: "CeraPro-Regular";
   font-weight: 400;
   font-style: normal;
   src: local("CeraPro-Regular"), url("../fonts/CeraPro-Regular.woff2") format("woff2"), url("../fonts/CeraPro-Regular.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "CeraPro-Light";
+  font-weight: 300;
+  font-style: normal;
+  src: local("CeraPro-Light"), url("../fonts/CeraPro-Light.woff2") format("woff2"), url("../fonts/CeraPro-Light.woff") format("woff");
   font-display: swap;
 }
 /* Указываем box sizing */
@@ -17,7 +31,6 @@
 ul[class],
 ol[class] {
   padding: 0;
-  margin: 0;
   list-style-type: none;
 }
 
@@ -96,6 +109,12 @@ a {
   color: #fff;
 }
 
+.delivery__title {
+  font-family: "CeraPro-Medium", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .request__input::-moz-placeholder {
   font-family: "CeraPro-Regular", sans-serif;
   font-weight: 400;
@@ -108,10 +127,16 @@ a {
   font-style: normal;
 }
 
-.footer-item__contacts-link, .footer-item__link, .footer-item__text, .footer-item__title, .request__call, .request__input::placeholder, .request__input, .contacts__link, .contacts__span, .about-company__ceo, .about-company__name, .about-company__subtitle, .about-company__text, .about-company__number, .about-company__description, .about-company__back, .account-profile__out, .account-profile__edit, .account-profile__orders, .account-profile__email, .account-profile__name, .account-profile__title, .account-order__pend, .account-order__text, .account-order__num, .account-order__title, .add-card__tab-item, .add-card__tab, .add-card__btn, .add-card__price, .add-card .jq-number__field input, .add-card__title, .add-card__add, .page-info__description, .page-info__text, .care__title, .info-nav__link, .society__link, .society__text, .brand__left-subtitle, .brand__left-title, .brand__subtitle, .brand__text, .product__price, .product__text, .slider-item__title, .header-page .header-menu__link,
+.footer-item__contacts-link, .footer-item__link, .footer-item__text, .footer-item__title, .delivery__item, .bonus__title, .request__call, .request__input::placeholder, .request__input, .contacts__link, .contacts__span, .about-company__ceo, .about-company__name, .about-company__subtitle, .about-company__text, .about-company__number, .about-company__description, .about-company__back, .account-profile__out, .account-profile__edit, .account-profile__orders, .account-profile__email, .account-profile__name, .account-profile__title, .account-order__pend, .account-order__text, .account-order__num, .account-order__title, .add-card__tab-item, .add-card__tab, .add-card__btn, .add-card__price, .add-card .jq-number__field input, .add-card__title, .add-card__add, .page-info__description, .page-info__text, .care__title, .info-nav__link, .society__link, .society__text, .brand__left-subtitle, .brand__left-title, .brand__subtitle, .brand__text, .product__price, .product__text, .slider-item__title, .header-page .header-menu__link,
 .header-page .header-menu__contact, .header-menu__link, .header-menu__contact, .title {
   font-family: "CeraPro-Regular", sans-serif;
   font-weight: 400;
+  font-style: normal;
+}
+
+.bonus__item {
+  font-family: "CeraPro-Light", sans-serif;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -1132,6 +1157,7 @@ body {
 .product-contacts .footer-item__social-link {
   width: 62px;
   height: 62px;
+  background: #eee4da;
 }
 .product-contacts .footer-item__social-link + .footer-item__social-link {
   margin-left: 26px;
@@ -1206,6 +1232,104 @@ body {
 }
 .request__call svg {
   margin-left: 10px;
+}
+
+.process {
+  padding: 134px 0 110px;
+}
+.process__inner {
+  max-width: 809px;
+  width: 100%;
+  margin: 0 auto;
+}
+.process .about-company__subtitle {
+  margin-top: 50px;
+}
+.process__banner {
+  margin-top: 50px;
+  width: 100%;
+  height: 420px;
+  border-radius: 6px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bonus {
+  padding: 134px 0 112px;
+}
+.bonus__inner {
+  max-width: 809px;
+  width: 100%;
+  margin: 0 auto;
+}
+.bonus__img {
+  margin-top: 30px;
+}
+.bonus__list {
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bonus__item + .bonus__item {
+  margin-left: 120px;
+}
+.bonus__item {
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  font-size: 96px;
+  line-height: 110%;
+  letter-spacing: -0.03em;
+  color: #ac8f78;
+}
+.bonus__title {
+  font-size: 20px;
+  line-height: 180%;
+  letter-spacing: -0.02em;
+  color: #555;
+  opacity: 0.3;
+}
+
+.delivery {
+  padding: 134px 0 110px;
+}
+.delivery__inner {
+  max-width: 809px;
+  width: 100%;
+  margin: 0 auto;
+}
+.delivery__title {
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  color: #555;
+  margin-top: 50px;
+}
+.delivery__item + .delivery__item {
+  margin-top: 29px;
+}
+.delivery__item {
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.02em;
+  color: #555;
+  padding-left: 28px;
+  position: relative;
+}
+.delivery__item:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 7px;
+  width: 5px;
+  height: 5px;
+  background-color: #555;
+  border-radius: 50%;
 }
 
 .footer {
