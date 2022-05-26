@@ -109,7 +109,7 @@ a {
   color: #fff;
 }
 
-.delivery__title {
+.delivery__title, .start-page__link {
   font-family: "CeraPro-Medium", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -127,7 +127,7 @@ a {
   font-style: normal;
 }
 
-.footer-item__contacts-link, .footer-item__link, .footer-item__text, .footer-item__title, .delivery__item, .bonus__title, .request__call, .request__input::placeholder, .request__input, .contacts__link, .contacts__span, .about-company__ceo, .about-company__name, .about-company__subtitle, .about-company__text, .about-company__number, .about-company__description, .about-company__back, .account-profile__out, .account-profile__edit, .account-profile__orders, .account-profile__email, .account-profile__name, .account-profile__title, .account-order__pend, .account-order__text, .account-order__num, .account-order__title, .add-card__tab-item, .add-card__tab, .add-card__btn, .add-card__price, .add-card .jq-number__field input, .add-card__title, .add-card__add, .page-info__description, .page-info__text, .care__title, .info-nav__link, .society__link, .society__text, .brand__left-subtitle, .brand__left-title, .brand__subtitle, .brand__text, .product__price, .product__text, .slider-item__title, .header-page .header-menu__link,
+.footer-item__contacts-link, .footer-item__link, .footer-item__text, .footer-item__title, .partners-information__link, .delivery__item, .bonus__title, .request__call, .request__input::placeholder, .request__input, .contacts__link, .contacts__span, .about-company__ceo, .about-company__name, .about-company__subtitle, .about-company__text, .about-company__number, .about-company__description, .about-company__back, .account-profile__out, .account-profile__edit, .account-profile__orders, .account-profile__email, .account-profile__name, .account-profile__title, .account-order__pend, .account-order__text, .account-order__num, .account-order__title, .add-card__tab-item, .add-card__tab, .add-card__btn, .add-card__price, .add-card .jq-number__field input, .add-card__title, .add-card__add, .page-info__description, .page-info__text, .care__title, .info-nav__link, .society__link, .society__text, .brand__left-subtitle, .brand__left-title, .brand__subtitle, .brand__text, .product__price, .product__text, .slider-item__title, .header-page .header-menu__link,
 .header-page .header-menu__contact, .header-menu__link, .header-menu__contact, .title {
   font-family: "CeraPro-Regular", sans-serif;
   font-weight: 400;
@@ -181,8 +181,6 @@ body {
   margin-top: 20px;
 }
 .start-page__link {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   color: forestgreen;
@@ -245,6 +243,7 @@ body {
 
 .header-slider {
   margin-top: -128px;
+  margin-top: -160px;
 }
 
 .slider .slick-arrow {
@@ -1281,7 +1280,6 @@ body {
 .bonus__item {
   display: flex;
   flex-direction: column;
-  font-weight: 300;
   font-size: 96px;
   line-height: 110%;
   letter-spacing: -0.03em;
@@ -1348,12 +1346,43 @@ body {
   justify-content: space-between;
 }
 
+.partners {
+  padding: 134px 0 110px;
+}
+
+.partners-information {
+  max-width: 809px;
+  width: 100%;
+  margin: 0 auto;
+}
+.partners-information__img {
+  margin-top: 30px;
+}
+.partners-information__link {
+  display: block;
+  margin: 30px auto 70px;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  color: #555;
+  padding: 28px 46px;
+  background: #eee4da;
+  -webkit-backdrop-filter: blur(14px);
+          backdrop-filter: blur(14px);
+  border-radius: 66px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.partners-information__link svg {
+  margin-left: 10px;
+}
+
 .footer-item {
   max-width: 244px;
   width: 100%;
 }
 .footer-item__title {
-  font-weight: 400;
   font-size: 20px;
   line-height: 120%;
   letter-spacing: -0.02em;

@@ -17,8 +17,7 @@
     margin-top: 20px;
   }
   &__link {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    @extend %CeraPro-Medium-500;
     font-size: 20px;
     line-height: 24px;
     color: forestgreen;
@@ -93,6 +92,7 @@
 }
 .header-slider {
   margin-top: -128px;
+  margin-top: -160px;
 }
 .slider {
   .slick-arrow {
@@ -1151,7 +1151,6 @@
     display: flex;
     flex-direction: column;
     @extend %CeraPro-Light-300;
-    font-weight: 300;
     font-size: 96px;
     line-height: 110%;
     letter-spacing: -0.03em;
@@ -1182,10 +1181,11 @@
     color: #555;
     margin-top: 50px;
   }
-  &__item + .delivery__item{
+  &__item + .delivery__item {
     margin-top: 29px;
   }
-  &__item{
+
+  &__item {
     @extend %CeraPro-Regular-400;
 
     font-size: 18px;
@@ -1194,9 +1194,9 @@
     color: #555;
     padding-left: 28px;
     position: relative;
-    &:before{
+    &:before {
       position: absolute;
-      content: '';
+      content: "";
       left: 0;
       top: 7px;
       width: 5px;
@@ -1219,12 +1219,39 @@
     justify-content: space-between;
   }
 }
+.partners {
+  padding: 134px 0 110px;
+}
+.partners-information {
+  max-width: 809px;
+  width: 100%;
+  margin: 0 auto;
+  &__img {
+    margin-top: 30px;
+  }
+  &__link {
+    display: block;
+    margin: 30px auto 70px;
+    @extend %CeraPro-Regular-400;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #555;
+    padding: 28px 46px;
+    background: #eee4da;
+    backdrop-filter: blur(14px);
+    border-radius: 66px;
+    width: fit-content;
+    svg {
+      margin-left: 10px;
+    }
+  }
+}
 .footer-item {
   max-width: 244px;
   width: 100%;
   &__title {
     @extend %CeraPro-Regular-400;
-    font-weight: 400;
     font-size: 20px;
     line-height: 120%;
     letter-spacing: -0.02em;
