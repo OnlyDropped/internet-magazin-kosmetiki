@@ -8,7 +8,7 @@
 /* Убираем внутренние отступы */
 ul[class],
 ol[class] {
-  padding: 0;
+  //padding: 0;
   //margin: 0;
   list-style-type: none;
 }
@@ -44,7 +44,7 @@ body {
 ul[class],
 ol[class] {
   list-style: none;
-  padding: 0;
+  //padding: 0;
 }
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
