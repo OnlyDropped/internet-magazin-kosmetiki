@@ -13,7 +13,7 @@ $('.slider').slick({
   ]
 });
 
-
+/*http://w3.org.ua/jquery/jquery-pishem-akkordeon-s-primeneniem-effektov/ */
 
  $('.add-card__preview').slick({
   slidesToShow: 4,

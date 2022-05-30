@@ -125,14 +125,14 @@ a {
   font-style: normal;
 }
 
-.footer-item__contacts-link, .footer-item__link, .footer-item__text, .footer-item__title, .partners-information__link, .delivery__item, .bonus__title, .request__call, .request__input::placeholder, .request__input, .contacts__link, .contacts__span, .about-company__ceo, .about-company__name, .about-company__subtitle, .about-company__text, .about-company__number, .about-company__description, .about-company__back, .account-profile__out, .account-profile__edit, .account-profile__orders, .account-profile__email, .account-profile__name, .account-profile__title, .account-order__pend, .account-order__text, .account-order__num, .account-order__title, .add-card__tab-item, .add-card__tab, .add-card__btn, .add-card__price, .add-card .jq-number__field input, .add-card__title, .add-card__add, .page-info__description, .page-info__text, .care__title, .info-nav__link, .society__link, .society__text, .brand__left-subtitle, .brand__left-title, .brand__subtitle, .brand__text, .product__price, .product__text, .slider-item__title, .header-page .header-menu__link,
+.footer-item__contacts-link, .footer-item__link, .footer-item__text, .footer-item__title, .partners-information__link, .delivery__item, .bonus__title, .request__call, .request__input::placeholder, .request__input, .contacts__link, .contacts__span, .about-company__ceo, .about-company__name, .about-company__subtitle, .about-company__text, .about-company__number, .about-company__description, .about-company__back, .account-profile__out, .account-profile__edit, .account-profile__orders, .account-profile__email, .account-profile__name, .account-profile__title, .account-order__pend, .account-order__text, .account-order__num, .account-order__title, .add-card__tab-item, .add-card__tab, .add-card__btn, .add-card__price, .add-card .jq-number__field input, .add-card__title, .add-card__add, .page-info__description, .page-info__text, .care__title, .info-nav__link, .society__link, .brand__left-subtitle, .brand__left-title, .brand__subtitle, .product__price, .product__text, .slider-item__title, .header-page .header-menu__link,
 .header-page .header-menu__contact, .header-menu__link, .header-menu__contact, .title {
   font-family: "CeraPro-Regular", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.bonus__item {
+.bonus__item, .society__text, .brand__text {
   font-family: "CeraPro-Light", sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -203,6 +203,9 @@ body {
   font-size: 14px;
   line-height: 120%;
   letter-spacing: -0.02em;
+}
+.header-menu__item:nth-child(4), .header-menu__item:nth-child(5), .header-menu__item:nth-child(6), .header-menu__item:nth-child(7) {
+  display: none;
 }
 .header-menu__logo {
   margin: 0 auto;
@@ -1439,6 +1442,38 @@ body {
 }
 
 @media (max-width: 1024px) {
+  .add-card__content {
+    width: 600px;
+  }
+  .add-card__slider {
+    width: 600px;
+    height: 695px;
+  }
+  .add-card .tovar-thumb {
+    width: 600px;
+    height: 695px;
+  }
+  .add-card .tovar-thumb__item {
+    width: 600px;
+    height: 695px;
+  }
+  .add-card .tovar-preview {
+    height: 695px;
+  }
+  .add-card__info {
+    padding-left: 20px;
+  }
+  .add-card__btn {
+    padding: 30px 45px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .society {
+    padding: 100px 0;
+  }
+
   .footer {
     padding: 75px 0 120px;
   }
@@ -1448,6 +1483,53 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .header-page .header-menu {
+    padding: 45px 0;
+  }
+  .header-page .header-menu__list {
+    padding: 0;
+  }
+
+  .product {
+    padding: 60px 0;
+  }
+  .product__item {
+    max-width: 350px;
+  }
+
+  .brand {
+    background-image: none;
+  }
+  .brand__content {
+    padding: 70px 0;
+  }
+
+  .society {
+    padding: 100px 0;
+  }
+  .society__info {
+    margin-bottom: 65px;
+  }
+  .society__text {
+    font-size: 38px;
+  }
+  .society__img {
+    width: 340px;
+  }
+  .society__link {
+    padding: 28px 75px;
+  }
+
+  .add-card__wrap {
+    flex-direction: column;
+  }
+  .add-card__content {
+    margin-bottom: 30px;
+  }
+  .add-card__info {
+    margin-left: 0;
+  }
+
   .footer__logo {
     margin-bottom: 75px;
   }
@@ -1508,6 +1590,70 @@ body {
     display: none;
   }
 
+  .product {
+    padding: 40px 0;
+  }
+  .product__wrap {
+    row-gap: 20px;
+  }
+  .product__item {
+    max-width: 195px;
+    height: 335px;
+    padding: 20px 15px;
+  }
+
+  .brand__content {
+    padding: 60px 0;
+  }
+
+  .society {
+    padding: 90px 0;
+  }
+  .society__info {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .society__text {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+  .society__img {
+    width: 195px;
+    height: 195px;
+  }
+
+  .add-card__content {
+    width: 395px;
+  }
+  .add-card__slider {
+    width: 395px;
+    height: 600px;
+  }
+  .add-card .tovar-thumb {
+    width: 395px;
+    height: 600px;
+  }
+  .add-card .tovar-thumb__item {
+    width: 395px;
+    height: 600px;
+  }
+  .add-card .tovar-thumb__item-img {
+    width: 395px;
+    height: 600px;
+  }
+  .add-card .tovar-preview {
+    height: 600px;
+  }
+  .add-card__info {
+    padding-left: 0;
+  }
+  .add-card__btn {
+    padding: 15px 45px;
+  }
+  .add-card__tabs {
+    margin-top: 40px;
+  }
+
   .slider .slick-arrow {
     left: 15px;
     background: #c07c99;
@@ -1541,6 +1687,78 @@ body {
   }
 }
 @media (max-width: 375px) {
+  .product {
+    padding: 35px 0;
+  }
+  .product__item {
+    max-width: 345px;
+    height: 430px;
+    padding: 20px 15px;
+  }
+
+  .brand__content {
+    padding: 40px 0;
+  }
+  .brand__logo {
+    margin-bottom: 30px;
+  }
+  .brand__text {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+  .brand__subtitle {
+    font-size: 16px;
+  }
+  .brand__author {
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  .society {
+    padding: 45px 0;
+  }
+  .society__text {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .society__link {
+    width: 100%;
+    justify-content: center;
+  }
+  .society__img {
+    width: 164px;
+    height: 164px;
+  }
+
+  .add-card {
+    background: darkcyan;
+  }
+  .add-card__wrap {
+    border: 1px solid #000;
+  }
+  .add-card__content {
+    width: 345px;
+  }
+  .add-card__slider {
+    width: 345px;
+    height: 520px;
+  }
+  .add-card .tovar-thumb {
+    width: 345px;
+    height: 520px;
+  }
+  .add-card .tovar-thumb__item {
+    width: 345px;
+    height: 520px;
+  }
+  .add-card .tovar-thumb__item-img {
+    width: 345px;
+    height: 520px;
+  }
+  .add-card .tovar-preview {
+    height: 520px;
+  }
+
   .footer {
     padding: 50px 0 30px;
   }

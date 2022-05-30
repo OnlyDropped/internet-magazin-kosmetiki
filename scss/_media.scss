@@ -1,4 +1,37 @@
 @media (max-width: 1024px) {
+  .add-card {
+    //&__wrap {
+    //  border: 1px solid #000;
+    //}
+    &__content {
+      width: 600px;
+    }
+    &__slider {
+      width: 600px;
+      height: 695px;
+    }
+    .tovar-thumb {
+      width: 600px;
+      height: 695px;
+    }
+    .tovar-thumb__item {
+      width: 600px;
+      height: 695px;
+    }
+    .tovar-preview {
+      height: 695px;
+    }
+    &__info {
+      padding-left: 20px;
+    }
+    &__btn {
+      padding: 30px 45px;
+      width: fit-content;
+    }
+  }
+  .society {
+    padding: 100px 0;
+  }
   .footer {
     padding: 75px 0 120px;
   }
@@ -8,6 +41,52 @@
 }
 
 @media (max-width: 768px) {
+  .header-page {
+    .header-menu {
+      padding: 45px 0;
+    }
+    .header-menu__list {
+      padding: 0;
+    }
+  }
+  .product {
+    padding: 60px 0;
+    &__item {
+      max-width: 350px;
+    }
+  }
+  .brand {
+    background-image: none;
+    &__content {
+      padding: 70px 0;
+    }
+  }
+  .society {
+    padding: 100px 0;
+    &__info {
+      margin-bottom: 65px;
+    }
+    &__text {
+      font-size: 38px;
+    }
+    &__img {
+      width: 340px;
+    }
+    &__link {
+      padding: 28px 75px;
+    }
+  }
+  .add-card {
+    &__wrap {
+      flex-direction: column;
+    }
+    &__content {
+      margin-bottom: 30px;
+    }
+    &__info {
+      margin-left: 0;
+    }
+  }
   .footer {
     &__logo {
       margin-bottom: 75px;
@@ -78,7 +157,70 @@
       display: none;
     }
   }
-
+  .product {
+    padding: 40px 0;
+    &__wrap {
+      row-gap: 20px;
+    }
+    &__item {
+      max-width: 195px;
+      height: 335px;
+      padding: 20px 15px;
+    }
+  }
+  .brand {
+    &__content {
+      padding: 60px 0;
+    }
+  }
+  .society {
+    padding: 90px 0;
+    &__info {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+    &__text {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+    &__img {
+      width: 195px;
+      height: 195px;
+    }
+  }
+  .add-card {
+    &__content {
+      width: 395px;
+    }
+    &__slider {
+      width: 395px;
+      height: 600px;
+    }
+    .tovar-thumb {
+      width: 395px;
+      height: 600px;
+    }
+    .tovar-thumb__item {
+      width: 395px;
+      height: 600px;
+    }
+    .tovar-thumb__item-img {
+      width: 395px;
+      height: 600px;
+    }
+    .tovar-preview {
+      height: 600px;
+    }
+    &__info {
+      padding-left: 0;
+    }
+    &__btn {
+      padding: 15px 45px;
+    }
+    &__tabs {
+      margin-top: 40px;
+    }
+  }
   .slider {
     .slick-arrow {
       left: 15px;
@@ -117,6 +259,76 @@
 }
 
 @media (max-width: 375px) {
+  .product {
+    padding: 35px 0;
+    &__item {
+      max-width: 345px;
+      height: 430px;
+      padding: 20px 15px;
+    }
+  }
+  .brand {
+    &__content {
+      padding: 40px 0;
+    }
+    &__logo {
+      margin-bottom: 30px;
+    }
+    &__text {
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+    &__subtitle {
+      font-size: 16px;
+    }
+    &__author {
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+  }
+  .society {
+    padding: 45px 0;
+    &__text {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+    &__link {
+      width: 100%;
+      justify-content: center;
+    }
+    &__img {
+      width: 164px;
+      height: 164px;
+    }
+  }
+  .add-card {
+    background: darkcyan;
+    &__wrap {
+      border: 1px solid #000;
+    }
+    &__content {
+      width: 345px;
+    }
+    &__slider {
+      width: 345px;
+      height: 520px;
+    }
+    .tovar-thumb {
+      width: 345px;
+      height: 520px;
+    }
+    .tovar-thumb__item {
+      width: 345px;
+      height: 520px;
+    }
+    .tovar-thumb__item-img {
+      width: 345px;
+      height: 520px;
+    }
+    .tovar-preview {
+      height: 520px;
+    }
+  }
   .footer {
     padding: 50px 0 30px;
     &__logo {
