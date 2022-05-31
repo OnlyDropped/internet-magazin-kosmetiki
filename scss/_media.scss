@@ -32,6 +32,77 @@
   .society {
     padding: 100px 0;
   }
+
+  .page-card {
+    padding: 0px;
+    background-size: 50%;
+    .page-info__inner {
+      padding: 75px 0;
+    }
+  }
+  .brand-page {
+    padding: 0;
+    background-size: 60%;
+  }
+  .brand {
+    &__content {
+      max-width: 500px;
+      padding: 90px 0;
+    }
+  }
+  .beauty-product {
+    padding: 80px 0px;
+  }
+  .category-brand {
+    &__wrap {
+      flex-wrap: wrap;
+      row-gap: 20px;
+    }
+    .product__item {
+      max-width: 100%;
+      width: 50%;
+      border: 1px solid #000;
+    }
+    &__right {
+      display: none;
+      .product__item {
+        border: 1px solid darkgreen;
+      }
+    }
+    &__left {
+      display: none;
+    }
+  }
+  .page-info {
+    background-size: 50%;
+    &__inner {
+      max-width: 480px;
+      padding: 100px 0;
+    }
+  }
+  .account {
+    padding: 100px 0px;
+  }
+  .account-profile {
+    padding: 65px 0px;
+  }
+  .account-wrapper {
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+  .account-order {
+    &__slider .slick-arrow.slick-prev {
+      right: 185px;
+    }
+    &__slider .slick-arrow.slick-next {
+      right: 149px;
+    }
+    &__title {
+      font-size: 33px;
+      margin-bottom: 40px;
+    }
+  }
   .footer {
     padding: 75px 0 120px;
   }
@@ -86,6 +157,70 @@
     &__info {
       margin-left: 0;
     }
+  }
+  .page-card {
+    .page-info__inner {
+      max-width: 380px;
+      padding: 40px 0;
+    }
+    .page-info__text {
+      font-size: 30px;
+      margin: 35px 0px;
+    }
+  }
+  .brand {
+    &__logo {
+      margin-bottom: 50px;
+    }
+    &__content {
+      max-width: 100%;
+    }
+  }
+  .beauty-product {
+    padding: 60px 0px;
+    &__title {
+      margin-bottom: 45px;
+      font-size: 35px;
+    }
+    .product__item {
+      background-position: center;
+      height: 390px;
+      padding: 10px 15px;
+    }
+  }
+  .page-info {
+    background-image: none;
+    &__inner {
+      max-width: 100%;
+      padding: 80px 0;
+    }
+    &__text {
+      margin: 35px 0;
+    }
+  }
+  .account {
+    padding: 50px 0px;
+    .slick-arrow {
+      z-index: 1;
+      border: 1px solid #000;
+    }
+    &__btn {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+  }
+  .account-order {
+    &__slider .slick-arrow.slick-prev {
+      right: 340px;
+    }
+    &__slider .slick-arrow.slick-next {
+      right: 305px;
+    }
+  }
+  .account-profile {
+    display: none;
   }
   .footer {
     &__logo {
@@ -236,6 +371,35 @@
       font-size: 35px;
     }
   }
+  .page-card {
+    background-image: none;
+  }
+  .beauty-product {
+    padding: 40px 0px;
+    &__title {
+      font-size: 25px;
+      max-width: 305px;
+    }
+  }
+  .info-nav {
+    padding: 15px 0px;
+    &__list {
+      padding: 0;
+    }
+    &__item + .info-nav__item {
+      margin-left: 0px;
+    }
+    &__link {
+      font-size: 15px;
+    }
+  }
+  .care {
+    padding: 45px 0;
+    &__title {
+      font-size: 39px;
+      margin-bottom: 25px;
+    }
+  }
   .footer {
     padding: 75px 0;
     &__inner {
@@ -302,12 +466,17 @@
     }
   }
   .add-card {
-    background: darkcyan;
-    &__wrap {
-      border: 1px solid #000;
-    }
+    //background: darkcyan;
+    //&__wrap {
+    //  border: 1px solid #000;
+    //}
     &__content {
       width: 345px;
+    }
+    &__title {
+      font-size: 40px;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
     &__slider {
       width: 345px;
@@ -327,6 +496,33 @@
     }
     .tovar-preview {
       height: 520px;
+    }
+  }
+  .beauty-product {
+    .slick-arrow {
+      top: -80px;
+    }
+    .product__item + .product__item {
+      margin-left: 10px;
+    }
+  }
+  .info-nav {
+    &__list {
+      flex-wrap: wrap;
+      row-gap: 15px;
+    }
+  }
+  .category-brand {
+    &__wrap {
+      flex-direction: column;
+    }
+    .product__item {
+      width: 100%;
+    }
+  }
+  .page-info {
+    &__inner {
+      padding: 45px 0;
     }
   }
   .footer {
@@ -368,6 +564,60 @@
     }
     & + .footer-item {
       margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .add-card {
+    &__tab {
+      font-size: 16px;
+      padding: 3px 10px;
+    }
+    &__content {
+      width: 300px;
+    }
+    &__slider {
+      width: 300px;
+      height: 400px;
+    }
+    .tovar-thumb {
+      width: 300px;
+      height: 400px;
+    }
+    .tovar-thumb__item {
+      width: 300px;
+      height: 400px;
+    }
+    .tovar-thumb__item-img {
+      width: 300px;
+      height: 400px;
+    }
+    .tovar-preview {
+      height: 400px;
+    }
+  }
+  .page-card {
+    .page-info__text {
+      font-size: 27px;
+      margin: 20px 0px;
+    }
+  }
+  .beauty-product {
+    &__title {
+      font-size: 23px;
+      max-width: 100%;
+    }
+    .slick-arrow {
+      top: -45px;
+    }
+  }
+  .info-nav {
+    &__list {
+      flex-direction: column;
+    }
+    &__link {
+      font-size: 18px;
     }
   }
 }

@@ -12,6 +12,7 @@
     <title>Document</title>
   </head>
   <body>
+    <!--
     <header class="header header-page">
       <div class="container">
         <div class="header-menu">
@@ -90,6 +91,7 @@
         </div>
       </div>
     </header>
+-->
 
     <main class="main">
       <section class="account">
@@ -408,10 +410,15 @@
                 Logout</a
               >
             </div>
+
+            <a class="account__btn" href="#">
+              <img src="img/icons/menu (1).svg" alt="">
+            </a>
           </div>
         </div>
       </section>
     </main>
+    <!--
     <footer class="footer">
       <div class="container">
         <a class="footer__logo" href="#">
@@ -512,7 +519,7 @@
         </div>
       </div>
     </footer>
-
+-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
@@ -523,8 +530,19 @@
         prevArrow: '<button type="button" class="slick-prev"><img src="img/icons/prev-arrow.svg" alt=""></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="img/icons/next-arrow.svg" alt=""></button>',
         //fade: true,
-        cssEase: 'linear'
+        cssEase: 'linear',
+        responsive: [
+        {
+          breakpoint: 1025,
+          settings: {
+            slidesToShow: 2,
+          }
+        }
+        ]     
       });
+
+
+      
     </script>
   </body>
 </html>

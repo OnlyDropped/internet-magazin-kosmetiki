@@ -700,6 +700,9 @@
   padding: 102px 0 110px;
   position: relative;
   background: #f5ece3;
+  &__btn{
+    display: none;
+  }
 }
 .account-wrapper {
   &__title {

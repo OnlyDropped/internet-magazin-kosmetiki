@@ -819,6 +819,9 @@ body {
   position: relative;
   background: #f5ece3;
 }
+.account__btn {
+  display: none;
+}
 
 .account-wrapper__title {
   margin-bottom: 65px;
@@ -1474,6 +1477,78 @@ body {
     padding: 100px 0;
   }
 
+  .page-card {
+    padding: 0px;
+    background-size: 50%;
+  }
+  .page-card .page-info__inner {
+    padding: 75px 0;
+  }
+
+  .brand-page {
+    padding: 0;
+    background-size: 60%;
+  }
+
+  .brand__content {
+    max-width: 500px;
+    padding: 90px 0;
+  }
+
+  .beauty-product {
+    padding: 80px 0px;
+  }
+
+  .category-brand__wrap {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  .category-brand .product__item {
+    max-width: 100%;
+    width: 50%;
+    border: 1px solid #000;
+  }
+  .category-brand__right {
+    display: none;
+  }
+  .category-brand__right .product__item {
+    border: 1px solid darkgreen;
+  }
+  .category-brand__left {
+    display: none;
+  }
+
+  .page-info {
+    background-size: 50%;
+  }
+  .page-info__inner {
+    max-width: 480px;
+    padding: 100px 0;
+  }
+
+  .account {
+    padding: 100px 0px;
+  }
+
+  .account-profile {
+    padding: 65px 0px;
+  }
+
+  .account-wrapper__title {
+    margin-bottom: 30px;
+  }
+
+  .account-order__slider .slick-arrow.slick-prev {
+    right: 185px;
+  }
+  .account-order__slider .slick-arrow.slick-next {
+    right: 149px;
+  }
+  .account-order__title {
+    font-size: 33px;
+    margin-bottom: 40px;
+  }
+
   .footer {
     padding: 75px 0 120px;
   }
@@ -1528,6 +1603,71 @@ body {
   }
   .add-card__info {
     margin-left: 0;
+  }
+
+  .page-card .page-info__inner {
+    max-width: 380px;
+    padding: 40px 0;
+  }
+  .page-card .page-info__text {
+    font-size: 30px;
+    margin: 35px 0px;
+  }
+
+  .brand__logo {
+    margin-bottom: 50px;
+  }
+  .brand__content {
+    max-width: 100%;
+  }
+
+  .beauty-product {
+    padding: 60px 0px;
+  }
+  .beauty-product__title {
+    margin-bottom: 45px;
+    font-size: 35px;
+  }
+  .beauty-product .product__item {
+    background-position: center;
+    height: 390px;
+    padding: 10px 15px;
+  }
+
+  .page-info {
+    background-image: none;
+  }
+  .page-info__inner {
+    max-width: 100%;
+    padding: 80px 0;
+  }
+  .page-info__text {
+    margin: 35px 0;
+  }
+
+  .account {
+    padding: 50px 0px;
+  }
+  .account .slick-arrow {
+    z-index: 1;
+    border: 1px solid #000;
+  }
+  .account__btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .account-order__slider .slick-arrow.slick-prev {
+    right: 340px;
+  }
+  .account-order__slider .slick-arrow.slick-next {
+    right: 305px;
+  }
+
+  .account-profile {
+    display: none;
   }
 
   .footer__logo {
@@ -1667,6 +1807,39 @@ body {
     font-size: 35px;
   }
 
+  .page-card {
+    background-image: none;
+  }
+
+  .beauty-product {
+    padding: 40px 0px;
+  }
+  .beauty-product__title {
+    font-size: 25px;
+    max-width: 305px;
+  }
+
+  .info-nav {
+    padding: 15px 0px;
+  }
+  .info-nav__list {
+    padding: 0;
+  }
+  .info-nav__item + .info-nav__item {
+    margin-left: 0px;
+  }
+  .info-nav__link {
+    font-size: 15px;
+  }
+
+  .care {
+    padding: 45px 0;
+  }
+  .care__title {
+    font-size: 39px;
+    margin-bottom: 25px;
+  }
+
   .footer {
     padding: 75px 0;
   }
@@ -1730,14 +1903,13 @@ body {
     height: 164px;
   }
 
-  .add-card {
-    background: darkcyan;
-  }
-  .add-card__wrap {
-    border: 1px solid #000;
-  }
   .add-card__content {
     width: 345px;
+  }
+  .add-card__title {
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .add-card__slider {
     width: 345px;
@@ -1757,6 +1929,29 @@ body {
   }
   .add-card .tovar-preview {
     height: 520px;
+  }
+
+  .beauty-product .slick-arrow {
+    top: -80px;
+  }
+  .beauty-product .product__item + .product__item {
+    margin-left: 10px;
+  }
+
+  .info-nav__list {
+    flex-wrap: wrap;
+    row-gap: 15px;
+  }
+
+  .category-brand__wrap {
+    flex-direction: column;
+  }
+  .category-brand .product__item {
+    width: 100%;
+  }
+
+  .page-info__inner {
+    padding: 45px 0;
   }
 
   .footer {
@@ -1796,5 +1991,53 @@ body {
   }
   .footer-item + .footer-item {
     margin-left: 0;
+  }
+}
+@media (max-width: 320px) {
+  .add-card__tab {
+    font-size: 16px;
+    padding: 3px 10px;
+  }
+  .add-card__content {
+    width: 300px;
+  }
+  .add-card__slider {
+    width: 300px;
+    height: 400px;
+  }
+  .add-card .tovar-thumb {
+    width: 300px;
+    height: 400px;
+  }
+  .add-card .tovar-thumb__item {
+    width: 300px;
+    height: 400px;
+  }
+  .add-card .tovar-thumb__item-img {
+    width: 300px;
+    height: 400px;
+  }
+  .add-card .tovar-preview {
+    height: 400px;
+  }
+
+  .page-card .page-info__text {
+    font-size: 27px;
+    margin: 20px 0px;
+  }
+
+  .beauty-product__title {
+    font-size: 23px;
+    max-width: 100%;
+  }
+  .beauty-product .slick-arrow {
+    top: -45px;
+  }
+
+  .info-nav__list {
+    flex-direction: column;
+  }
+  .info-nav__link {
+    font-size: 18px;
   }
 }/*# sourceMappingURL=style.css.map */

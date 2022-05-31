@@ -23,7 +23,16 @@ $('.slider').slick({
   fade: true,
   vertical: true,
   verticalSwiping: true,
-  asNavFor: '.add-card__thumb'
+  asNavFor: '.add-card__thumb',
+  responsive: [
+    {
+      breakpoint: 376,
+      settings: {
+        vertical: false,
+        verticalSwiping: false,
+      }
+    }
+  ]
 });
 $('.add-card__thumb').slick({
   slidesToShow: 1,
@@ -72,8 +81,27 @@ $('.beauty-product__wrapper').slick({
   prevArrow: '<button type="button" class="slick-prev"><img src="img/icons/prev-arrow.svg" alt=""></button>',
   nextArrow: '<button type="button" class="slick-next"><img src="img/icons/next-arrow.svg" alt=""></button>',
   //fade: true,
-  cssEase: 'linear'
-  
+  cssEase: 'linear',
+  responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 426,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 376,
+      settings: {
+        slidesToShow: 1,
+      }
+    }
+  ]
 });
 
 
@@ -87,4 +115,9 @@ $('.add-card__tabs').each(function() {
 	}).eq(0).addClass('active');
 });
 
+/*
+$('.account__btn').on(click, function{
+  $('.account-profile').toggleClass('account-profile--active');   
+});
 
+*/
