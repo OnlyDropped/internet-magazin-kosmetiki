@@ -21,6 +21,7 @@
     font-size: 20px;
     line-height: 24px;
     color: forestgreen;
+    text-align: center;
   }
 }
 //body {
@@ -58,7 +59,7 @@
   &__item:nth-child(4),
   &__item:nth-child(5),
   &__item:nth-child(6),
-  &__item:nth-child(7){
+  &__item:nth-child(7) {
     display: none;
   }
 
@@ -75,6 +76,74 @@
   }
   &__nav-link + .header-menu__nav-link {
     margin-left: 25px;
+  }
+  .inner{
+    display: none;
+  }
+  &__btn{
+    padding: 0;
+    border: none;
+    background: transparent;
+    display: none;
+  }
+  &__search{
+    z-index: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  &__button{
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    @extend %CeraPro-Light-300;
+    font-size: 18px;
+  }
+  &__form {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    background: #f5ece3;
+    border-radius: 6px;
+    position: absolute;
+    //bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 80px;
+    display: none;
+    .header-menu__button{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  &__form--active{
+    border: 1px solid rgba(0, 0, 0, 0.4);
+  }
+  &__form-search {
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    outline: none;
+    padding-bottom: 20px;
+    padding: 20px 36px;
+    @extend %CeraPro-Medium-500;
+    font-size: 22px;
+    line-height: 100%;
+    background-image: url('../img/icons/search-1.svg');
+    background-repeat: no-repeat;
+    background-position: 98% center;
+    &::placeholder {
+      @extend %CeraPro-Regular-400;
+      font-size: 32px;
+      line-height: 100%;
+      letter-spacing: -0.02em;
+      color: #5555;
+    }
   }
 }
 .header-page {
@@ -201,8 +270,8 @@
   //background-position: left center;
   //background-size: cover;
   //background: #f5ece3;
-  //background: rgb(245, 236, 227) url("../img/brand.png") no-repeat;
-  background: rgb(245, 236, 227) url("../img/brand.png") no-repeat left center;
+  //background: #f5ece3 url("../img/brand.png") no-repeat;
+  background: #f5ece3 url("../img/brand.png") no-repeat left center;
   &__content {
     max-width: 542px;
     width: 100%;
@@ -338,9 +407,8 @@
   }
 }
 .page-info {
-  background: rgb(245, 236, 227) url("../img/category/info-bg.png") no-repeat
-    left center;
-  //background: rgb(245, 236, 227) url("../img/brand.png") no-repeat left center;
+  background: #f5ece3 url("../img/category/info-bg.png") no-repeat left center;
+  //background: #f5ece3 url("../img/brand.png") no-repeat left center;
   &__inner {
     max-width: 650px;
     width: 100%;
@@ -519,7 +587,7 @@
     border: 1px solid #ccc;
     border-bottom-color: #b3b3b3;
     border-radius: 4px;
-    box-shadow: inset 1px 1px #f1f1f1, 0 1px 2px rgb(0 0 0 / 10%);
+    //box-shadow: inset 1px 1px #f1f1f1, 0 1px 2px rgb(0 0 0 / 10%);
 
     border: none;
     box-shadow: none;
@@ -642,10 +710,9 @@
 }
 .page-card {
   padding: 35px 0px;
-  background-color: rgb(2, 9, 28);
-  background: rgb(245, 236, 227) url("../img/category/info-bg.png") no-repeat
-    right center;
-  //background-color: rgb(2, 9, 28);
+  background-color: #02091c;
+  background: #f5ece3 url("../img/category/info-bg.png") no-repeat right center;
+  //background-color: #02091c;
   .page-info__inner {
     max-width: 536px;
     margin-left: 0;
@@ -656,7 +723,7 @@
 }
 .brand-page {
   padding: 35px 0;
-  //background-color: rgb(31, 90, 251);
+  //background-color: #1f5afb;
 }
 .beauty-product {
   padding: 79px 0 114px;
@@ -700,7 +767,7 @@
   padding: 102px 0 110px;
   position: relative;
   background: #f5ece3;
-  &__btn{
+  &__btn {
     display: none;
   }
 }
